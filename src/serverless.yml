@@ -1,0 +1,43 @@
+service: serverless-layers-example
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: ap-northeast-1
+
+package:
+  individually: true
+  exclude:
+    - "**/*"
+
+functions:
+  # 関数1
+  # レイヤーよりmomentをインポートし、現在の時刻を返す
+  function1:
+    handler: function1/index.handler
+    timeout: 60
+    description: serverless-layersプラグインの動作確認関数1
+    package:
+      include:
+        - "function1/index.js"
+
+  # 関数2
+  # レイヤーよりaxiosをインポートし、自身のブログへのgetリクエストを行いレスポンスステータスをチェックする
+  function2:
+    handler: function2/index.handler
+    timeout: 60
+    description: serverless-layersプラグインの動作確認関数2
+    package:
+      include:
+        - "function2/index.js"
+
+plugins:
+  - serverless-layers
+
+custom:
+  serverless-layers:
+    layersDeploymentBucket: ${self:service}-layers-${aws:accountId}
+    dependenciesPath: ../opt/nodejs/package.json
+    compatibleRuntimes: ["nodejs16.x"]

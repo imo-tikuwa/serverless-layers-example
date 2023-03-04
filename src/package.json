@@ -1,0 +1,13 @@
+{
+  "name": "serverless-layers-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "serverless": "^3.27.0",
+    "serverless-layers": "^2.6.1"
+  }
+}
