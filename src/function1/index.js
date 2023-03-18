@@ -1,4 +1,4 @@
-const moment = require("/opt/nodejs/node_modules/moment");
+const moment = require("moment");
 
 module.exports.handler = async (event) => {
   // 関数1

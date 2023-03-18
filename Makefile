@@ -2,7 +2,6 @@ up:
 	docker-compose up -d
 init:
 	docker-compose up -d --build
-	docker-compose exec app npm --prefix /opt/nodejs install /opt/nodejs
 	docker-compose exec app npm install
 	docker-compose exec app bash -c 'npx serverless config credentials --provider aws --key $$AWS_ACCESS_KEY_ID --secret $$AWS_SECRET_ACCESS_KEY'
 

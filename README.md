@@ -5,9 +5,8 @@
 - Serverless Framework の[serverless-layers](https://github.com/agutoli/serverless-layers)というプラグインを活用したサンプルリポジトリ
   - 2 つの関数を 1 つの serverless.yml の構成でまとめてデプロイ
   - 開発環境(WSL2+Docker)と運用環境(AWS Lambda)で同じコードが実行できるような構成を作成
-  - それぞれの関数内で使用したいライブラリについてレイヤー化
-    - 開発環境で`/opt/nodejs/node_modules/~~`のようなパスとなるようにすることで運用環境のレイヤーとパスが揃う
-  - それぞれレイヤー化された node_modules から axios,moment をインポートして簡単なコードを実行
+  - それぞれの関数内で使用したいライブラリ(axios,moment)についてレイヤー化
+  - レイヤー化された node_modules から axios,moment をインポートして簡単なコードを実行
 
 のようなことをやっています
 

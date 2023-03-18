@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "",
+  "author": "imo-tikuwa",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "moment": "^2.29.4"
+  },
   "devDependencies": {
     "prettier": "^2.8.4",
     "serverless": "^3.27.0",

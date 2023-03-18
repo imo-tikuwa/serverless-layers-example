@@ -1,4 +1,4 @@
-const axios = require("/opt/nodejs/node_modules/axios");
+const axios = require("axios");
 
 module.exports.handler = async (event) => {
   // 関数2
