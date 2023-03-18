@@ -34,7 +34,7 @@ $ make test-function1
 $ make test-function2
 ```
 
-### デプロイ作業手順
+## デプロイ作業手順
 
 1. (初回のみ) serverless-layers プラグインでレイヤー化したい node_modules をアップロードする S3 バケットを手動で作成する必要があった
 
